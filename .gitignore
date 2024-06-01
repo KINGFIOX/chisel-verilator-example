@@ -1,0 +1,7 @@
+build
+obj_dir
+project
+.*
+!.gitignore
+!.scalafmt.conf
+
