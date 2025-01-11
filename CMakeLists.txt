@@ -3,8 +3,7 @@ cmake_policy(SET CMP0074 NEW)
 cmake_policy(SET CMP0144 NEW)
 project(GCD)
 
-# 当然啦，这里要修改成你的 VERILATOR_ROOT, 通常是 /usr/local/share/verilator
-set(VERILATOR_ROOT /usr/local/Cellar/verilator/5.024/share/verilator)
+set(VERILATOR_ROOT /usr/share/verilator)
 
 find_package(verilator HINTS ${VERILATOR_ROOT})
 if (NOT verilator_FOUND)
@@ -19,4 +18,4 @@ target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 verilate(${PROJECT_NAME} COVERAGE TRACE
   INCLUDE_DIRS "./src/test/cxx"
   VERILATOR_ARGS -Wall -Wno-UNUSEDSIGNAL
-  SOURCES "GCD.sv")
+  SOURCES "generated/GCD.sv")

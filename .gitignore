@@ -1,7 +1,9 @@
 build
 obj_dir
-project
+target
+generated
 .*
+!.devcontainer
 !.gitignore
 !.scalafmt.conf
 
