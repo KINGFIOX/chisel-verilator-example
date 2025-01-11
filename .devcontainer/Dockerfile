@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:jammy
+FROM mcr.microsoft.com/devcontainers/base:bullseye
 
 # install scala environment && win far ahead
 RUN apt-get update && apt-get install -y openjdk-17-jdk
@@ -13,4 +13,5 @@ ENV https_proxy="" http_proxy="" all_proxy=""
 RUN apt-get update && apt-get install -y clangd cmake
 
 # install verilator
+RUN apt-get update && apt-get install -y verilator
 

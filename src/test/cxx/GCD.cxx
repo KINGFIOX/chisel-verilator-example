@@ -4,6 +4,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <memory>
 
 /**
  * @brief 一个正确的 gcd 实现

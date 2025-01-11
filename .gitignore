@@ -2,6 +2,7 @@ build
 obj_dir
 target
 generated
+*.vcd
 .*
 !.devcontainer
 !.gitignore

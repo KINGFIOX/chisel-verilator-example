@@ -1,6 +1,4 @@
 cmake_minimum_required(VERSION 3.12)
-cmake_policy(SET CMP0074 NEW)
-cmake_policy(SET CMP0144 NEW)
 project(GCD)
 
 set(VERILATOR_ROOT /usr/share/verilator)
@@ -16,6 +14,5 @@ target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 # Add the Verilated circuit to the target
 # COVERAGE 覆盖率统计
 verilate(${PROJECT_NAME} COVERAGE TRACE
-  INCLUDE_DIRS "./src/test/cxx"
-  VERILATOR_ARGS -Wall -Wno-UNUSEDSIGNAL
+  VERILATOR_ARGS -Wall
   SOURCES "generated/GCD.sv")
